@@ -11,7 +11,12 @@
     <script src="./lib/gameView.js"></script>
   </head>
   <body>
+    <section class="menu">
+    </section>
     <canvas id="game-canvas" width="600" height="600"></canvas>
+    Score: <strong id="score"></strong>
+    <br>
+    Lives: <strong id="lives"></strong>
     <script type="text/javascript">
       var canvas = document.getElementById("game-canvas");
       var ctx = canvas.getContext("2d");
