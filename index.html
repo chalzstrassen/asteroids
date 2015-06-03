@@ -2,16 +2,17 @@
   <head>
     <style>
       html, body {
-        min-height: 500px;
-        min-width: 600px;
-        max-width: 1280px;
-        max-height: 720px;
-        background: #ddd;
-        margin: auto;
+        margin: 0;
+        padding: 0;
+        border: 0;
         overflow: hidden;
+        background: url("BackgroundForAsteroids.png");
+        background-repeat: no-repeat; 
+        background-size: cover;
       }
       #game-canvas {
-        background: url("BackgroundForAsteroids.png");
+        border: 1px solid white;
+        margin: 20px;
       }
     </style>
     <title>Jose's Escapism</title>
@@ -33,8 +34,8 @@
     Lives: <strong id="lives"></strong>
     <script type="text/javascript">
       var canvas = document.getElementById("game-canvas");
-      canvas.height = window.innerHeight;
-      canvas.width = window.innerWidth;
+      canvas.height = document.body.clientHeight-40;
+      canvas.width = document.body.clientWidth-40;
       var ctx = canvas.getContext("2d");
       var game = new Asteroids.Game(canvas.width, canvas.height);
       var gameView = new Asteroids.GameView(game, ctx);
