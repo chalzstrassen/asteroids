@@ -22,7 +22,4 @@
 ## Technical Implementation
 
 - Projectile behavior after hitting Blue/Magenta asteroids.
-
-## TODOs
-
-- After ship is relocated, the ship should be immune to colliding with asteroids momentarily.
+- After dying, the ship becomes white, which is when it is immune to collision. This should fix the issue in which during relocation, the ship may relocate to a position where collision with an asteroid can happen and cause the player to lose two lives in one death.
